@@ -1,0 +1,34 @@
+/// Creates Neat grid container with clearfix.
+///
+/// @argument {list} $grid
+///   The type of grid for this column. By default, the global
+///   `$neat-default-grid` will be used.
+///
+/// @example scss
+///   .element {
+///     @include neat-container;
+///   }
+///
+/// @example css
+///   .element {
+///     max-width: 1200px;
+///
+///     &::after {
+///       clear: both;
+///       content: "";
+///       display: table;
+///     }
+///   }
+
+@mixin neat-container($grid: $neat-default-grid) {
+  $_max-width: map-get($grid, max-width);
+
+  margin: 0 auto;
+  max-width: $_max-width;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

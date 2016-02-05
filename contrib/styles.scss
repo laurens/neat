@@ -1,1 +1,47 @@
 @import "../core/neat";
+
+$color-neat-blue: #53aee0;
+$color-neat-orange: #FF7C56;
+$color-white: #fff;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: $color-neat-blue;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.box--nested  {
+  @extend .box;
+  border: 2px solid $color-neat-orange;
+}
+
+.examples {
+  @include neat-container;
+}
+
+.column {
+  @include neat-column;
+}
+
+.column--thirds {
+  @include neat-column(4);
+}
+
+$nested-grid: (
+  columns: 3,
+  gutter: 0,
+);
+
+.column--thirds--alt {
+  @include neat-column(1, $nested-grid);
+}
+
+.column--full {
+  @include neat-column(12);
+  background-color: $color-neat-blue;
+  margin-bottom: 10px;
+}

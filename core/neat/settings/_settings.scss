@@ -1,0 +1,26 @@
+/// Neat default grid.
+///
+/// @type map
+///
+/// @property {number (unitless)} columns 12
+///   Number of grid columns
+///
+/// @property {number (with unit)} gutter 40px
+///   Grid gutter width.
+///
+/// @property {number (unitless)} max-width 960px
+///   Grid container's max-width.
+///
+/// @access private
+
+$neat-default-grid: (
+  columns: 12,
+  gutter: 20px,
+  max-width: 1200px,
+);
+
+/// User overrides of Neat default grid
+///
+/// @type map
+
+$neat-grid-default: () !default;
