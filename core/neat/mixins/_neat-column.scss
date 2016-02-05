@@ -29,8 +29,7 @@
     $_column-width-calc: unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
 
     width: calc(#{$_column-width-calc});
-  }
-  @else {
+  } @else {
     width: percentage($_column-ratio);
   }
 

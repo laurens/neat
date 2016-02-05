@@ -1,10 +1,12 @@
 @import "../core/neat";
 
 $color-neat-blue: #53aee0;
-$color-neat-orange: #FF7C56;
+$color-neat-orange: #ff7c56;
 $color-white: #fff;
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -14,7 +16,7 @@ $color-white: #fff;
   margin-bottom: 10px;
 }
 
-.box--nested  {
+.box--nested {
   @extend .box;
   border: 2px solid $color-neat-orange;
 }
