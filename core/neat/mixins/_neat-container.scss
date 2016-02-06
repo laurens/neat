@@ -23,7 +23,8 @@
 @mixin neat-container($grid: $neat-default-grid) {
   $_max-width: map-get($grid, max-width);
 
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: $_max-width;
 
   &::after {

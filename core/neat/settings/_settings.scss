@@ -18,9 +18,3 @@ $neat-default-grid: (
   gutter: 20px,
   max-width: 1200px,
 );
-
-/// User overrides of Neat default grid
-///
-/// @type map
-
-$neat-grid-default: () !default;
